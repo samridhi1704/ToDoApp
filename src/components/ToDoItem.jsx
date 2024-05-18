@@ -1,6 +1,6 @@
-export default function ToDoItem()
+export default function ToDoItem({text})
 {
-    const items = ["Read SpringBoot", "Complete assignments", "Prepare breakfast", "Sleep for 2 hours", "Take a shower"];
+    /* const items = ["Read SpringBoot", "Complete assignments", "Prepare breakfast", "Sleep for 2 hours", "Take a shower"];
     /* function getItems(){
          const arr=[];
         for(let i=0;i<items.length;i++)
@@ -8,12 +8,16 @@ export default function ToDoItem()
                 arr.push(<li key={i}>{items[i]}</li>);
            }
             return arr;
-     } */
+     }  
 
      return <> 
     
      {items.map((item,index)=>(
          <li key={index}> {item} </li>
      ))}
- </>
+ </> */
+
+
+
+ return <li> {text} </li>;
           }

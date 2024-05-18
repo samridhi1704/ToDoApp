@@ -14,7 +14,12 @@ body{
   margin-right: 10%;
   border-top: 5px;
 }
-p{
-  text-align: center;
+
+.List {
+  padding-left: 20px; /* Add some padding to the left of the list */
+}
+
+.List li {
+  text-align: left; /* Align list items to the left */
   font-size: 1.2em;
 }
