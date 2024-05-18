@@ -1,7 +1,11 @@
+import ToDoItem from "./ToDoItem";
+
 export default function ToDoList()
 {
     return <div className = "TaskList" >
-        <p>Nothing to do buddy. Sleep!! </p> 
+        <ul className="List" type='square'>
+            <ToDoItem /> 
+        </ul>
     </div>
 }
 
