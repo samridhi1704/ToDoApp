@@ -1,4 +1,20 @@
+body{
+  background-color: beige;
+}
 .Application {
   font-family: sans-serif;
   text-align: center;
+}
+.App-header h1{
+  text-decoration: underline;
+}
+.TaskList{
+  background-color:burlywood;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-top: 5px;
+}
+p{
+  text-align: center;
+  font-size: 1.2em;
 }
