@@ -22,6 +22,7 @@ body{
 .List li {
   text-align: left; /* Align list items to the left */
   font-size: 1.2em;
+  cursor: pointer; /* Set cursor to pointer */
 }
 
 /* Message styles */
