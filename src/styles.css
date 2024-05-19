@@ -24,3 +24,7 @@ body{
   font-size: 1.2em;
 }
 
+/* Message styles */
+.Message {
+  font-style: italic;
+}

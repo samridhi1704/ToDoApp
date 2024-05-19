@@ -18,12 +18,16 @@ export default function ToDoList() {
 
   return (
     <div className="TaskList">
+         {items.length === 0 ? ( // Check if there are no items
+       <p className="Message">Nothing to do buddy. Sleep!</p>
+      ) : (
       <ul className="List" type='square'>
         {items.map((item, index) => (
           <ToDoItem key={index} text={item} />
         ))}
       </ul>
-      <Button onClick ={deleteAllTasks} /> {/* Button to delete all tasks */}
+      )}
+    {items.length >0 && <Button onClick ={deleteAllTasks} />} {/* Button to delete all tasks */}
     </div>
   );
 }
