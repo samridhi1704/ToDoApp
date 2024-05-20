@@ -10,6 +10,7 @@ export default function ToDoList() {
     { id: 4, text: "Sleep for 2 hours", completed: false },
     { id: 5, text: "Take a shower", completed: false }
   ]);
+  const [newTask, setNewTask] = useState(""); // State to track the new task input
 
   const [completedTasksExist, setCompletedTasksExist] = useState(false); // State to track if completed tasks exist
 
@@ -34,10 +35,31 @@ export default function ToDoList() {
     setItems(filteredItems);
     setCompletedTasksExist(false); // No completed tasks exist after deletion
   };
-  
+
+  // Function to handle adding a new task
+  const addNewTask = () => {
+    if (newTask.trim() !== "") {
+      const newTaskItem = {
+        id: items.length + 1,
+        text: newTask,
+        completed: false
+      };
+      setItems([...items, newTaskItem]);
+      setNewTask(""); // Clear the input field after adding the task
+    }
+  };
 
   return (
     <div className="TaskList">
+      <div className="AddTaskForm">
+        <input
+          type="text"
+          placeholder="Add new task"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+        />
+        <Button onClick={addNewTask} text="Add Task" className="custom-button" />
+      </div>
       {items.length === 0 ? (
         <p className="Message">Nothing to do buddy. Sleep!</p>
       ) : (
@@ -53,7 +75,7 @@ export default function ToDoList() {
             ))}
           </ul>
           {completedTasksExist && ( // Render button only if completed tasks exist
-            <Button onClick={deleteCompletedTasks}>Remove Completed</Button>
+            <Button onClick={deleteCompletedTasks} text="Remove Completed" className="custom-button" />
           )}
         </>
       )}
