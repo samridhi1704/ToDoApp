@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Button({ onClick }) {
 return (
-    <button onClick={onClick}>Empty</button>
+    <button onClick={onClick}>Remove Completed</button>
  );
 }
